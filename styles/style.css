@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Colores */
+:root{
+    --color-primary: #204035;
+    --color-secondary: #4A7169;
+    --color-background: #BEB59C;
+    --color-background-form: #ffffff;
+    --color-text-primary: #49271B;
+    --color-text-secondary: #49271B;
+    --color-border: #cdcdcd;
+    --color-button-text: #fff;
+    --color-title: #f7f3fa;
+
+}
+
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+}
+
+/* Container */
+.container{
+    display: grid;
+    grid-template-columns: 4.2fr 5fr 0.8fr;
+    align-items: center;
+    width: 57.25rem;
+    height: 31rem;
+}
+
+form{
+    padding: 1.8rem;
+}
+
+.forms .login{
+    display: flex;
+    flex-direction: column;
+    height: 31rem;
+}
+
+form p{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-top: 0.3rem;
+    margin-bottom: 1.8rem;
+}
+
+form h2{
+    margin-bottom: 1.8rem;
+}
+
+form p a{
+    color: var(--color-text-primary);
+    font-weight: 700rem;
+}
+
+form .btn-register{
+    margin-top: 1.5rem;
+}
+
+/* Container de inputs */
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-container input{
+    padding: 0.7rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.4rem;
+    outline: none;
+}
+
+.input-container label,
+.input-container a{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Remember me */
+.remember-me{
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1.7rem;
+}
+
+.remember-me label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+/* Botón */
+form button{
+    width: 100%;
+    padding: 0.9rem 0;
+    background-color: var(--color-secondary);
+    color: var(--color-button-text);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+.input-container .forget{
+    display: flex;
+    justify-content: space-between;
+}
+
+.forms-container{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    background-color: var(--color-background-form);
+    overflow: hidden;
+}
+
+.banner{
+    height: 115%;
+    padding: 5rem 2rem 0 2rem;
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner h1{
+    color: var(--color-title);
+    font-size: 3rem;
+    line-height: 0.9;
+}
+
+.banner h1 span{
+    display: block;
+    font-weight: 500;
+}
+
+.banner p{
+    color: var(--color-background-form);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.banner img{
+    position: absolute;
+    bottom: 0.07rem;
+    right: -1rem;
+    width: 70%;
+}
+
+.shape{
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.2;
+    position: absolute;
+}
+
+.shape1{
+    height: 12.5rem;
+    width: 12.5rem;
+    left: 20rem;
+    top: 1.25rem;
+}
+
+.shape2{
+    height: 28rem;
+    width: 28rem;
+    bottom: -10rem;
+    right: -10rem;
+}
+
+.shape3{
+    height: 15rem;
+    width: 18rem;
+    left: -10rem;
+    top: 10.5rem;
+}
+
+.sidebar{
+    background-color: var(--color-background-form);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    user-select: none;
+}
+
+.sidebar .sign{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.sidebar span{
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.sidebar::after{
+    content: '';
+    background-color: var(--color-primary);
+    height: 50%;
+    width: 0.3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: top 0.5s ease;
+}
+
+.sidebar.active::after{
+    top:50%;
+}
+
+.sidebar img{
+    width: 1.5rem;
+}
+
+.input-container-register{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-container-register input{
+    padding: 0.5rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.4rem;
+    outline: none;
+}
+
+.input-container-register label{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.register-doc{
+    display: flex;
+}
+
+.input-container-register-doc{
+    padding-left: 1rem;
+}
+
+.input-container-register-doc label{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.input-container-register-doc input{
+    padding: 0.5rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.4rem;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+/* Estilos Exito.html */
+.container_exito{
+    display: grid;
+    grid-template-columns: 4.2fr;
+    align-items: center;
+    width: 57.25rem;
+    height: 31rem;
+}
+
+.forms_container_exito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-background-form);
+    overflow: hidden;
+}
+
+.mensaje_exito{
+    display: flex;
+    flex-direction: column;
+}
+
+.mensaje_exito span{
+    font-size: 1.5rem;
+}
+.forms_container_exito p{
+    padding: 1rem;
+}
+
+.forms.active{
+    transform: translateY(-50%);
+}
+
+.forms{
+    transition: transform 0.5s ease;
+}

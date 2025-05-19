@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Formulario de Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="forms" id="forms">
+                <form class="login" action="scripts/login.php" method="POST">
+                    <h2>Inicio de sesión</h2>
+                    <!-- <p>No tienes una cuenta aún? <a href="#">Registrate</a></p> -->
+                    <div class="input-container">
+                        <div>
+                            <label for="ID">Identificación</label>
+                        </div>
+                        <input id="ID" name="ident" type="text" placeholder="Ingrese su identificación">
+                    </div>
+                    <div class="input-container">
+                        <div class="forget">
+                            <label for="password_log">Contraseña</label>
+                            <!-- <a href="#">Olvidé mi contraseña</a> -->
+                        </div>
+                        <input id="password" type="password" name="password" placeholder="Ingrese una contraseña" required>
+                    </div>
+                    <div class="input-container-register">
+                        <div class="type-person">
+                            <input type="radio" id="1" value="1" name="tipo_persona" required>
+                            <label for="1">Estudiante</label>
+                            <input type="radio" id="2" value="2" name="tipo_persona" required>
+                            <label for="2">Docente</label>
+                        </div>
+                    </div>
+                    <button type="submit" name="Enviar">Iniciar sesión</button>
+                </form>
+                <form action="scripts/registrar.php" method="POST">
+                    <h2>Registro</h2>
+                    <div class="input-container-register">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <input value="" id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" required>
+                        <div>
+                            <label for="apellido">Apellido</label>
+                        </div>
+                        <input value="" id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido"
+                            required>
+                    </div>
+                    <div class="input-container-register">
+                        <div>
+                            <label for="nro_doc">Número de identificación</label>
+                        </div>
+                        <input value="" id="nro_doc" name="nro_doc" type="text" placeholder="Ingrese su identificación"
+                            required>
+                    </div>
+                    <div class="input-container-register">
+                        <div class="forget">
+                            <label for="password_reg">Contraseña</label>
+                        </div>
+                        <input value="" id="password_reg" name="password" type="password" placeholder="Ingrese una contraseña" required>
+                    </div>
+                    <div class="input-container-register">
+                        <div class="type-person">
+                            <input type="radio" id="1" value="1" name="tipo_persona" required>
+                            <label for="1">Estudiante</label>
+                            <input type="radio" id="2" value="2" name="tipo_persona" required>
+                            <label for="2">Docente</label>
+                        </div>
+                    </div>
+                    <button type="submit" name="Enviar">Registrarse</button>
+                </form>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <section>
+                <h1>Bienvenid@ al <span>portal de estudiantes y docentes</span></h1>
+                <p>Inicia sesión para acceder a tu cuenta</p>
+                <img src="images/estudiantes.svg" alt="">
+            </section>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sign" id="btn_login">
+                <img src="icons/login.svg" alt="">
+                <span>Iniciar sesión</span>
+            </div>
+            <div class="sign" id="btn_register">
+                <img src="icons/registro.svg" alt="">
+                <span>Registrarse</span>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
