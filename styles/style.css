@@ -300,8 +300,12 @@ form button{
     flex-direction: column;
 }
 
+.mensaje_exito img{
+    height: 100%;
+}
+
 .mensaje_exito span{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .forms_container_exito p{
     padding: 1rem;

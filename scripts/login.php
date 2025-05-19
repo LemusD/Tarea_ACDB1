@@ -20,6 +20,7 @@ function login($nro_doc, $tipo)
             while ($row = $result->fetch_assoc()) {
                 $_SESSION["nombre"] = $row['primer_nombre'];
                 $_SESSION["apellido"] = $row['primer_apellido'];
+                $_SESSION["tipo_per"] = "estudiante";
             }
             header("location: /tarea_acdb1/logExito.php");
         } else {
@@ -34,6 +35,7 @@ function login($nro_doc, $tipo)
             while ($row = $result->fetch_assoc()) {
                 $_SESSION["nombre"] = $row['primer_nombre'];
                 $_SESSION["apellido"] = $row['primer_apellido'];
+                $_SESSION["tipo_per"] = "docente";
             }
             header("location: /tarea_acdb1/logExito.php");
         } else {

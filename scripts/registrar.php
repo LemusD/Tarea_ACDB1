@@ -24,7 +24,7 @@ function ingresarPersona($nombre, $apellido, $nro_doc, $tipo){
     }else{
         $sql2 = "INSERT INTO docentes (`ID`, `nro_doc`, `primer_nombre`,`primer_apellido`,`password_p`) VALUES ('','$nro_doc','$nombre', '$apellido','".$_POST['password']."')";
         try {
-            if (mysqli_query($conn, $sql1)) {
+            if (mysqli_query($conn, $sql2)) {
                 header("location: /tarea_acdb1/regExito.html");
                 mysqli_close($conn);
             }

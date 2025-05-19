@@ -17,7 +17,7 @@
         <div class="forms_container_exito">
             <div class="mensaje_exito">
                 <img src="icons/icons8-marca-de-verificación-128.svg" alt="">
-                <span>Bienvenido, <?=$_SESSION["nombre"]?></span>
+                <span>Bienvenido/a, <?=$_SESSION["nombre"]." ".$_SESSION["apellido"].". Usted es un ".$_SESSION["tipo_per"];?></span>
             </div>
             <div>
                 <p>(<a href="index.html">Cerrar Sesión<?= session_destroy();?></a>)</p>
