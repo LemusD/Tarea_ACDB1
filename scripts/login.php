@@ -1,43 +1,43 @@
 <?php
+
+use Dom\Mysql;
+
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nro_doc = $_POST['ident'];
-    $password = $_POST['password'];
+    $password = $_POST["password"];
     $tipo_per = $_POST['tipo_persona'];
     // Llama a la función
-    login($nro_doc, $tipo_per);
+    login($nro_doc, $tipo_per, $password);
 }
 
-function login($nro_doc, $tipo)
+function login($nro_doc, $tipo, $password)
 {
     require_once "conexion.php";
     if ($tipo == 1) {
-        $stmt = $conn->prepare("SELECT * FROM estudiantes WHERE nro_doc = ? AND password_p = ?");
-        $stmt->bind_param("ss", $nro_doc, $_POST['password']);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $_SESSION["nombre"] = $row['primer_nombre'];
-                $_SESSION["apellido"] = $row['primer_apellido'];
-                $_SESSION["tipo_per"] = "estudiante";
-            }
+        $queryusuario = mysqli_query($conn, "select * from estudiante WHERE nro_doc = '" . $nro_doc . "'");
+        $nr = mysqli_num_rows($queryusuario);
+        $datosusuario = mysqli_fetch_array($queryusuario);
+        if (($nr == 1) && (password_verify($password, $datosusuario['password']))) {
+            $_SESSION["nombre"] = $datosusuario['nombre'];
+            $_SESSION["apellido"] = $datosusuario['apellido'];
+            $_SESSION["idEstudiante"] = $datosusuario['idEstudiante'];
+            $_SESSION["tipo_per"] = "estudiante";
             header("location: /tarea_acdb1/logExito.php");
+            mysqli_close($conn);
         } else {
             header("location: /tarea_acdb1/logFalla.html");
         }
     } else {
-        $stmt = $conn->prepare("SELECT * FROM docentes WHERE nro_doc = ? AND password_p = ?");
-        $stmt->bind_param("ss", $nro_doc, $_POST['password']);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $_SESSION["nombre"] = $row['primer_nombre'];
-                $_SESSION["apellido"] = $row['primer_apellido'];
-                $_SESSION["tipo_per"] = "docente";
-            }
+        $queryusuario = mysqli_query($conn, "select * from docente WHERE nro_doc = '" . $nro_doc . "'");
+        $nr = mysqli_num_rows($queryusuario);
+        $datosusuario = mysqli_fetch_array($queryusuario);
+        if (($nr == 1) && (password_verify($password, $datosusuario['password']))) {
+            $_SESSION["nombre"] = $datosusuario['nombre'];
+            $_SESSION["apellido"] = $datosusuario['apellido'];
+            $_SESSION["tipo_per"] = "docente";
             header("location: /tarea_acdb1/logExito.php");
+            mysqli_close($conn);
         } else {
             header("location: /tarea_acdb1/logFalla.html");
         }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +8,7 @@
 }
 
 /* Colores */
-:root{
+:root {
     --color-primary: #204035;
     --color-secondary: #4A7169;
     --color-background: #BEB59C;
@@ -21,7 +22,7 @@
 }
 
 /* body */
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +32,7 @@ body{
 }
 
 /* Container */
-.container{
+.container {
     display: grid;
     grid-template-columns: 4.2fr 5fr 0.8fr;
     align-items: center;
@@ -39,17 +40,17 @@ body{
     height: 31rem;
 }
 
-form{
+form {
     padding: 1.8rem;
 }
 
-.forms .login{
+.forms .login {
     display: flex;
     flex-direction: column;
     height: 31rem;
 }
 
-form p{
+form p {
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--color-text-secondary);
@@ -57,28 +58,28 @@ form p{
     margin-bottom: 1.8rem;
 }
 
-form h2{
+form h2 {
     margin-bottom: 1.8rem;
 }
 
-form p a{
+form p a {
     color: var(--color-text-primary);
     font-weight: 700rem;
 }
 
-form .btn-register{
+form .btn-register {
     margin-top: 1.5rem;
 }
 
 /* Container de inputs */
-.input-container{
+.input-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1.2rem;
 }
 
-.input-container input{
+.input-container input {
     padding: 0.7rem;
     border: 2px solid var(--color-border);
     border-radius: 0.4rem;
@@ -86,26 +87,26 @@ form .btn-register{
 }
 
 .input-container label,
-.input-container a{
+.input-container a {
     font-size: 0.8rem;
     font-weight: 600;
 }
 
 /* Remember me */
-.remember-me{
+.remember-me {
     display: flex;
     gap: 0.3rem;
     margin-bottom: 1.7rem;
 }
 
-.remember-me label{
+.remember-me label {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--color-text-secondary);
 }
 
 /* Botón */
-form button{
+form button {
     width: 100%;
     padding: 0.9rem 0;
     background-color: var(--color-secondary);
@@ -116,12 +117,12 @@ form button{
     cursor: pointer;
 }
 
-.input-container .forget{
+.input-container .forget {
     display: flex;
     justify-content: space-between;
 }
 
-.forms-container{
+.forms-container {
     display: grid;
     align-items: center;
     height: 100%;
@@ -129,7 +130,7 @@ form button{
     overflow: hidden;
 }
 
-.banner{
+.banner {
     height: 115%;
     padding: 5rem 2rem 0 2rem;
     background-color: var(--color-primary);
@@ -137,59 +138,59 @@ form button{
     overflow: hidden;
 }
 
-.banner h1{
+.banner h1 {
     color: var(--color-title);
     font-size: 3rem;
     line-height: 0.9;
 }
 
-.banner h1 span{
+.banner h1 span {
     display: block;
     font-weight: 500;
 }
 
-.banner p{
+.banner p {
     color: var(--color-background-form);
     font-size: 0.8rem;
     margin-top: 1rem;
 }
 
-.banner img{
+.banner img {
     position: absolute;
     bottom: 0.07rem;
     right: -1rem;
     width: 70%;
 }
 
-.shape{
+.shape {
     background-color: #fff;
     border-radius: 50%;
     opacity: 0.2;
     position: absolute;
 }
 
-.shape1{
+.shape1 {
     height: 12.5rem;
     width: 12.5rem;
     left: 20rem;
     top: 1.25rem;
 }
 
-.shape2{
+.shape2 {
     height: 28rem;
     width: 28rem;
     bottom: -10rem;
     right: -10rem;
 }
 
-.shape3{
+.shape3 {
     height: 15rem;
     width: 18rem;
     left: -10rem;
     top: 10.5rem;
 }
 
-.sidebar{
+.sidebar {
     background-color: var(--color-background-form);
     display: flex;
     flex-direction: column;
@@ -198,7 +199,7 @@ form button{
     user-select: none;
 }
 
-.sidebar .sign{
+.sidebar .sign {
     width: 100%;
     height: 100%;
     display: flex;
@@ -209,14 +210,14 @@ form button{
     cursor: pointer;
 }
 
-.sidebar span{
+.sidebar span {
     color: var(--color-text-secondary);
     font-size: 0.8rem;
     text-align: center;
     padding: 0.5rem;
 }
 
-.sidebar::after{
+.sidebar::after {
     content: '';
     background-color: var(--color-primary);
     height: 50%;
@@ -227,47 +228,47 @@ form button{
     transition: top 0.5s ease;
 }
 
-.sidebar.active::after{
-    top:50%;
+.sidebar.active::after {
+    top: 50%;
 }
 
-.sidebar img{
+.sidebar img {
     width: 1.5rem;
 }
 
-.input-container-register{
+.input-container-register {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1.2rem;
 }
 
-.input-container-register input{
+.input-container-register input {
     padding: 0.5rem;
     border: 2px solid var(--color-border);
     border-radius: 0.4rem;
     outline: none;
 }
 
-.input-container-register label{
+.input-container-register label {
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-.register-doc{
+.register-doc {
     display: flex;
 }
 
-.input-container-register-doc{
+.input-container-register-doc {
     padding-left: 1rem;
 }
 
-.input-container-register-doc label{
+.input-container-register-doc label {
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-.input-container-register-doc input{
+.input-container-register-doc input {
     padding: 0.5rem;
     border: 2px solid var(--color-border);
     border-radius: 0.4rem;
@@ -275,8 +276,8 @@ form button{
     margin-top: 0.5rem;
 }
 
-/* Estilos Exito.html */
-.container_exito{
+/* Estilos home.html */
+.container_exito {
     display: grid;
     grid-template-columns: 4.2fr;
     align-items: center;
@@ -284,7 +285,75 @@ form button{
     height: 31rem;
 }
 
-.forms_container_exito{
+.forms_container_exito {
+    /* border: 2px solid blue; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-background-form);
+    overflow: hidden;
+}
+
+.header_usuario {
+    /* border: 2px solid black; */
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.menu_usuario {
+    display: grid;
+    justify-content: space-between;
+}
+
+.opciones_menu {
+    /* border: 2px solid black; */
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+.opciones_menu img {
+    height: 5rem;
+}
+
+.menu_usuario {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos Inscrito.php */
+.container_inscrito {
+    display: grid;
+    grid-template-columns: 4.2fr;
+    align-items: center;
+    width: 57.25rem;
+    height: 31rem;
+}
+
+.forms_container_inscrito {
+    /* border: 2px solid blue; */
+    /* align-items: center; */
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-background-form);
+    overflow: hidden;
+}
+
+/* Estilos regErrorInsc.html */
+.container_falla_insc {
+    display: grid;
+    grid-template-columns: 4.2fr;
+    align-items: center;
+    width: 57.25rem;
+    height: 31rem;
+}
+
+.forms_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,26 +364,67 @@ form button{
     overflow: hidden;
 }
 
-.mensaje_exito{
+.mensaje_falla_insc{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.mensaje_exito img{
+.mensaje_falla_insc img{
+    height: 100px;
+}
+
+.mensaje_falla_insc span {
+    font-size: 1.5rem;
+}
+
+/* Estilos Inscripcion.php */
+.form_inscripcion{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+}
+
+table {
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th,td{
+    padding: 5px;
+}
+
+table thead{
+    background-color: var(--color-primary);
+    border-bottom: solid 5px black;
+    color: var(--color-background-form);
+}
+
+.form_inscripcion tr:hover td{
+    background-color: #204035;
+    color: var(--color-border);
+}
+
+.mensaje_exito img {
     height: 100%;
 }
 
-.mensaje_exito span{
+.mensaje_exito span {
     font-size: 2rem;
 }
-.forms_container_exito p{
+
+.forms_container_exito p {
     padding: 1rem;
 }
 
-.forms.active{
+.forms.active {
     transform: translateY(-50%);
 }
 
-.forms{
+.forms {
     transition: transform 0.5s ease;
 }

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -15,12 +15,19 @@
 <body>
     <div class="container_exito">
         <div class="forms_container_exito">
-            <div class="mensaje_exito">
-                <img src="icons/icons8-marca-de-verificación-128.svg" alt="">
-                <span>Bienvenido/a, <?=$_SESSION["nombre"]." ".$_SESSION["apellido"].". Usted es un ".$_SESSION["tipo_per"];?></span>
+            <div class="header_usuario">
+                <span>Bienvenido/a, <?= $_SESSION["nombre"] . " " . $_SESSION["apellido"]; ?></span>
+                <a href="index.html">Cerrar Sesión</a>
             </div>
-            <div>
-                <p>(<a href="index.html">Cerrar Sesión<?= session_destroy();?></a>)</p>
+            <div class="menu_usuario">
+                <div class="opciones_menu">
+                    <button><img src="icons/inscripcion.svg" alt="" ref></button>
+                    <a href="inscripcion.php">Inscribirse</a>
+                </div>
+                <div class="opciones_menu">
+                    <button><img src="icons/cursos.svg" alt=""></button>
+                    <a href="inscrito.php">Ver cursos inscritos</a>
+                </div>
             </div>
         </div>
     </div>
